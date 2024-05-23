@@ -41,7 +41,11 @@ const SupplyDashboard = () => {
             <TableHead className="text-white w-[100px] px-5">
               Description
             </TableHead>
+           
+            <TableHead className="text-white  w-[100px]">Category</TableHead>
+          
             <TableHead className="text-white  w-[100px]">price</TableHead>
+            <TableHead className="text-white  w-[100px]">Image</TableHead>
             <TableHead className="text-right text-white  w-[100px] ">
               Action
             </TableHead>
@@ -55,6 +59,7 @@ const SupplyDashboard = () => {
                 <TableCell>{item.description}</TableCell>
                 <TableCell>{item.category}</TableCell>
                 <TableCell>{item.quantity}</TableCell>
+                <TableCell>{item.image}</TableCell>
                 <TableCell className="text-right">
                   <EditModal supply={item}>
                     <Button className="m-2 p-2 bg-green-400 ">
