@@ -11,6 +11,7 @@ import storage from "redux-persist/lib/storage";
 import cartReducer from "../features/CartSlice"
 import { allReliefGoodsApi } from "../api/allReliefGoodsApi";
 import { configureStore } from '@reduxjs/toolkit';
+import themeReducer from './themeSlice';
 
 
 
@@ -20,6 +21,8 @@ const persistConfig ={
 };
 
 const persistedAuthReducer = persistReducer(persistConfig,authReducer)
+
+const persistedThemeReducer = persistReducer(persistConfig,themeReducer)
 // const allReliefGoodsApi: Api<BaseQueryFn<FetchArgs, BaseQueryApi, DefinitionType>, EndpointDefinitions, "baseApi", never, any> 
 
  export const store = configureStore({
@@ -27,6 +30,7 @@ const persistedAuthReducer = persistReducer(persistConfig,authReducer)
         [baseApi.reducerPath] : baseApi.reducer,
         auth: persistedAuthReducer,
         cart: cartReducer,
+        theme:persistedThemeReducer,
         allReliefGoods: allReliefGoodsApi.reducer,
     },
     middleware: ( getDefaultMiddlewares)  => getDefaultMiddlewares({

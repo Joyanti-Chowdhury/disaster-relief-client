@@ -23,10 +23,10 @@ const Login = () => {
 //   });
 
 
-const  defaultValues = {
-          id: "A-0001",
-     password: "admin123",
-      }
+// const  defaultValues = {
+//           id: "A-0001",
+//      password: "admin123",
+//       }
 
   const [login, { data, error }] = useLoginMutation();
 
@@ -60,10 +60,14 @@ const  defaultValues = {
   return (
     <div className="flex justify-center align-middle mt-10" style={{ height:'100vh' }}>
    
-    <PhForm onSubmit={onSubmit} defaultValues={defaultValues}>
-       <PhFormInput type="text" name="id" label="Id:" ></PhFormInput>
+    <PhForm onSubmit={onSubmit}>
+       <PhFormInput type="email" name="email" label="Email:" ></PhFormInput>
         <PhFormInput type="text" name="password" label="password:"></PhFormInput>
       {/* <Button htmlType="submit">Login</Button> */}
+      <div className="flex m-2">
+      <p>Don't you have an account?</p>
+      <a href="/register" className="text-sky-900 pl-5 font-semibold">Register</a>
+      </div>
        <Button type="submit">Login</Button>
     </PhForm>
     </div>

@@ -55,7 +55,7 @@ const Sidebar = () => {
 <aside className=' bg-light-gray col-span-2 h-screen sticky top-0 left-0 overflow-auto p-4 lg:p-5 '>
             
             <nav className='flex flex-col gap-5'>
-              <NavLink to='/admin/dashboard' className={({isActive}) =>
+              <NavLink to='dashboard' className={({isActive}) =>
               cn('p-3 bg-gray rounded-md hover:bg-dark-gray hover:text-white transition-all  flex items-center gap-2',{
             
             
@@ -70,7 +70,7 @@ const Sidebar = () => {
                 </NavLink>
             
                 
-              <NavLink to='/all-supply' className={({isActive}) =>
+              <NavLink to='/dashboard/supplies' className={({isActive}) =>
               cn('p-3 bg-gray rounded-md hover:bg-dark-gray hover:text-white transition-all  flex items-center gap-2',{
             
             
@@ -83,7 +83,7 @@ const Sidebar = () => {
                   <LayoutDashboard className='shrink-0'></LayoutDashboard>
                   <span className='truncate'>   All Supply</span>
                 </NavLink>
-              <NavLink to='/admin/add-supply' className={({isActive}) =>
+              <NavLink to='/dashboard/create-supply' className={({isActive}) =>
               cn('p-3 bg-gray rounded-md hover:bg-dark-gray hover:text-white transition-all  flex items-center gap-2',{
             
             
@@ -96,7 +96,7 @@ const Sidebar = () => {
                   <LayoutDashboard className='shrink-0'></LayoutDashboard>
                   <span className='truncate'>  Add supply</span>
                 </NavLink>
-              <NavLink to='/admin/create-supply' className={({isActive}) =>
+              <NavLink to='/' className={({isActive}) =>
               cn('p-3 bg-gray rounded-md hover:bg-dark-gray hover:text-white transition-all  flex items-center gap-2',{
             
             
@@ -107,7 +107,7 @@ const Sidebar = () => {
             
             }>
                   <LayoutDashboard className='shrink-0'></LayoutDashboard>
-                  <span className='truncate'>  Create supply</span>
+                  <span className='truncate'>  Home</span>
                 </NavLink>
 
                  

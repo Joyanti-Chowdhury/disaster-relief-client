@@ -39,7 +39,7 @@ import { useGetAllReliefGoodsQuery } from "../../redux/api/allReliefGoodsApi";
 //     {
 //       "_id":" 3",
 //       "title": "Blankets",
-//       "image": cardImg3,
+//       "image":  "https://i.ibb.co/Zf5JtrC/cardImg7.jpg",
 //       "unit": "units",
 //       "quantity": 2000,
 //       "category": "Food Supplies",
@@ -50,7 +50,7 @@ import { useGetAllReliefGoodsQuery } from "../../redux/api/allReliefGoodsApi";
 //     {
 //       "_id":" 4",
 //       "title": "First Aid Kits",
-//       "image": cardImg4,
+//       "image": "https://i.ibb.co/Zf5JtrC/cardImg7.jpg",
 //       "unit": "kits",
 //       "quantity": 500,
 //       "category": "Clothing",
@@ -61,7 +61,7 @@ import { useGetAllReliefGoodsQuery } from "../../redux/api/allReliefGoodsApi";
 //     {
 //       "_id":"5",
 //       "title": "Flashlights",
-//       "image": cardImg5,
+//       "image": "https://i.ibb.co/Zf5JtrC/cardImg7.jpg",
 //       "unit": "units",
 //       "quantity": 1000,
 //       "category": "Clothing",
@@ -72,7 +72,7 @@ import { useGetAllReliefGoodsQuery } from "../../redux/api/allReliefGoodsApi";
 //     {
 //       "_id":"6",
 //       "title": "Battery Packs",
-//       "image": cardImg1,
+//       "image": "https://i.ibb.co/Zf5JtrC/cardImg7.jpg",
 //       "unit": "units",
 //       "quantity": 300,
 //       "category": "Shelter Kits",
@@ -83,7 +83,7 @@ import { useGetAllReliefGoodsQuery } from "../../redux/api/allReliefGoodsApi";
 //     {
 //       "_id":"7",
 //       "title": "Hygiene Kits",
-//       "image": cardImg2,
+//       "image":  "https://i.ibb.co/Zf5JtrC/cardImg7.jpg",
 //       "unit": "kits",
 //       "quantity": 1500,
 //       "category": "Clothing",
@@ -94,7 +94,7 @@ import { useGetAllReliefGoodsQuery } from "../../redux/api/allReliefGoodsApi";
 //     {
 //       "_id":"8",
 //       "title": "Tents",
-//       "image": cardImg3,
+//       "image": "https://i.ibb.co/Zf5JtrC/cardImg7.jpg",
 //       "unit": "units",
 //       "quantity": 100,
 //       "category": "Food Supplies",
@@ -105,7 +105,7 @@ import { useGetAllReliefGoodsQuery } from "../../redux/api/allReliefGoodsApi";
 //     {
 //       "_id": "9",
 //       "title": "Portable Stoves",
-//       "image": cardImg4,
+//       "image": "https://i.ibb.co/Zf5JtrC/cardImg7.jpg",
 //       "unit": "units",
 //       "category": "Shelter Kits",
 //       "quantity": 200,
@@ -157,7 +157,7 @@ const AllReliefGoodsTest = () => {
   //   dispatch(info);
   // };
 
-console.log(data)
+// console.log(data)
 
 
 

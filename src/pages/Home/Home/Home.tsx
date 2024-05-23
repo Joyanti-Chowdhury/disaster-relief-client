@@ -10,11 +10,13 @@ import TestGallery from '../TestGallery';
 import About from '../../../pages/About';
 import Protocols from './Protocols';
 import DistributionCenter from './DistributionCenter';
+import { useAppSelector } from '../../../redux/features/hooks';
 // import ViewDetails from '../../../pages/AllReliefGoodsTest/ViewDetails';
 
 const Home = () => {
+    const { darkMode } = useAppSelector((store) => store.theme);
     return (
-        <div>
+        <div className={` min-h-screen w-full ${darkMode ? "bg-black text-white" : ""}`}>
             {/* <Nav></Nav> */}
          
        <Banner></Banner>

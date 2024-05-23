@@ -10,7 +10,7 @@ import ViewDetailsCard from './ViewDetailsCard';
 const reliefData = [
   
     {
-      "_id":" 1",
+      "id":" 1",
       "title": "Bottled Water",
       "image": cardImg1,
       "unit": "liters",

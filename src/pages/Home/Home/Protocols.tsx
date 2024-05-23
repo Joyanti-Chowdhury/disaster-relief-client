@@ -1,5 +1,9 @@
 import Container from "../../../Components/ui/Container";
 import { motion } from 'framer-motion';
+import protocol from '../../../assets/protocol1.png'
+import protocol1 from '../../../assets/protocol4.jpg'
+import protocol2 from '../../../assets/protocol2.jpg'
+import protocol3 from '../../../assets/protocol6.jpeg'
 
 const Protocols = () => {
   return (
@@ -76,26 +80,40 @@ const Protocols = () => {
        
         <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-8"
           whileHover={{ scale: 1.05 }}>
-          <motion.div className="bg-cyan-100 shadow-lg rounded-lg p-8"  
+          <motion.div className="bg-cyan-100 shadow-lg rounded-lg p-8 justify-center"  
            whileHover={{ scale: 1.05 }}>
-          
-            <h3 className="text-xl font-semibold mb-4">Before Disaster Strikes</h3>
+             
+           <div>
+           <img className="w-full h-[200px]  mt-3 mb-4 rounded-md" src={protocol} alt="" />
+           </div>
+        <div>
+        <h3 className="text-xl font-semibold mb-4">Before Disaster Strikes</h3>
             <p className="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit justo vitae neque venenatis fringilla. Nulla facilisi. Vivamus nec mauris vitae est posuere finibus ac at metus.</p>
+        </div>
           </motion.div>
           <motion.div className="bg-cyan-100 shadow-lg rounded-lg p-8"
             whileHover={{ scale: 1.05 }}>
+               <div>
+           <img className="w-full h-[200px]  mt-3 mb-4 rounded-md" src={protocol1} alt="" />
+           </div>
+           
             <h3 className="text-xl font-semibold mb-4">During Disaster</h3>
             <p className="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit justo vitae neque venenatis fringilla. Nulla facilisi. Vivamus nec mauris vitae est posuere finibus ac at metus.</p>
           </motion.div>
           <motion.div className="bg-cyan-100 shadow-lg rounded-lg p-8"
             whileHover={{ scale: 1.05 }}
           >
-        
+                <div>
+           <img className="w-full h-[200px]  mt-3 mb-4 rounded-md" src={protocol2} alt="" />
+           </div>
             <h3 className="text-xl font-semibold mb-4">After Disaster</h3>
             <p className="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit justo vitae neque venenatis fringilla. Nulla facilisi. Vivamus nec mauris vitae est posuere finibus ac at metus.</p>
           </motion.div>
           <motion.div className="bg-cyan-100 shadow-lg rounded-lg p-8"
             whileHover={{ scale: 1.05 }}>
+               <div>
+           <img className="w-full h-[200px]  mt-3 mb-4 rounded-md" src={protocol3} alt="" />
+           </div>
             <h3 className="text-xl font-semibold mb-4">Additional Resources</h3>
             <ul className="list-disc list-inside text-gray-700">
               <li>Emergency contact numbers</li>

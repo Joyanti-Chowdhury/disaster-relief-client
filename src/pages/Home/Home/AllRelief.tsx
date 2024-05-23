@@ -179,18 +179,23 @@ const AllRelief = () => {
   //   isFetching
   // );
 
-  const [ {  isLoading: isLoading1, isFetching: isFetching1 }] =
-    usePostReliefGoodsMutation();
+  // const [ {  isLoading: isLoading1 , isFetching: isFetching1 }] =
+  //   usePostReliefGoodsMutation();
+
+    const [, {isLoading: isLoading1 }] =  usePostReliefGoodsMutation();
 
 
 
+
+
+ 
      if(isLoading1){
       return <h1>Loading....</h1>
      }
 
-     if(isFetching1){
-      return <h1>Fetching....</h1>
-     }
+    //  if(isFetching1){
+    //   return <h1>Fetching....</h1>
+    //  }
   // const handleSubmit = () => {
   //   const info = {
   //     name: "test",
@@ -199,7 +204,7 @@ const AllRelief = () => {
   //   dispatch(info);
   // };
 
-console.log(data)
+// console.log(data)
 
 
 // const setReliefData1: React.Dispatch<React.SetStateAction<undefined>> = (setReliefData1) => {
@@ -207,9 +212,9 @@ console.log(data)
 // }
       
   return (
-    <Container>
+    <Container className="m-16 ">
   
-      <div>
+      <div className="mt-20">
         <h1 className="mt-16 text-5xl text-center font-bold text-cyan-400">
           All Relief Goods
         </h1>
@@ -222,7 +227,7 @@ console.log(data)
       <div>
         <div className="grid grid-cols-1 lg:grid-cols-3">
           {/* services */}
-         {data?.map((relief:any) =>
+         {data?.slice(0,6).map((relief:any) =>
             <Relief
                 key={relief._id}
                 relief={relief}
@@ -347,7 +352,10 @@ console.log(data)
 
         </div>
             <div className=" flex justify-center titles-center">
-            <Button className="mt-5 bg-cyan-700 mx-auto">View all</Button>
+              <a href="/all-relief-goods">
+              <Button  className="mt-5 bg-cyan-700 mx-auto w-full font-bold text-xl">View all</Button>
+              </a>
+            {/* <Button  className="mt-5 bg-cyan-700 mx-auto">View all</Button> */}
             </div>
       </div>
     </Container>

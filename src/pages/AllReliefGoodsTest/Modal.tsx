@@ -39,7 +39,7 @@ const Modal = ({relief, onClose,handleViewDetails} : any) => {
                 {quantity}
               </p>
               <p className="text-sm lg:text-base ">
-                <strong>Quantity : </strong>
+                <strong>Expire Date : </strong>
                 {expiry_date}
               </p>
             </div>

@@ -1,24 +1,13 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Button } from "../../Components/ui/button";
+
 import Container from "../../Components/ui/Container";
-import {
-    Table,
-    TableBody,
-    TableCell,
-    TableFooter,
-    TableHead,
-    TableHeader,
-    TableRow,
-  } from "../../Components/ui/table";
-  import { Pencil, Trash2 } from "lucide-react"
+
   import Chart from 'chart.js/auto'
 import { MutableRefObject, useEffect, useRef } from "react";
   
 const AdminDashboard = () => {
 
-    const handleDelete = () =>{
 
-    }
   //  const chartRef:MutableRefObject<null> = useRef(null)
   //  const chartInstance: MutableRefObject<null> = useRef(null)
 
@@ -76,45 +65,7 @@ const AdminDashboard = () => {
 
 
 
-      <Table>
-        <TableHeader>
-          <TableRow className="bg-dark-gray ">
-            <TableHead className="w-[70px] text-white">Name</TableHead>
-            <TableHead className="text-white w-[100px] px-5">Description</TableHead>
-            <TableHead className="text-white  w-[100px]">price</TableHead>
-            <TableHead className="text-right text-white  w-[100px] ">
-              Action
-            </TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {/* {services?.map((service) => ( */}
-            <TableRow>
-              <TableCell className="font-medium">name</TableCell>
-              <TableCell>description</TableCell>
-              <TableCell>asdf</TableCell>
-              <TableCell className="text-right">
-                <Button className="m-2 p-2 bg-green-400 ">
-                  <Pencil></Pencil>
-                </Button>
-                <Button
-                  onClick={() => handleDelete()}
-                  variant="destructive"
-                  className="p-2 m-2"
-                >
-                  <Trash2></Trash2>
-                </Button>
-              </TableCell>
-            </TableRow>
-          {/* ))} */}
-        </TableBody>
-        <TableFooter>
-          <TableRow>
-            <TableCell colSpan={3}>Total Services</TableCell>
-            <TableCell className="text-right">total</TableCell>
-          </TableRow>
-        </TableFooter>
-      </Table>
+  
 
 
 

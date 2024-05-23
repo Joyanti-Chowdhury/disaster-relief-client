@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 // import Container from "@/Components/ui/Container";
 
@@ -5,8 +6,17 @@ import Container from"../../Components/ui/Container"
 import { motion } from "framer-motion"
 import { NavLink } from "react-router-dom";
 import logo from '../../assets/logo.jpg'
-
+import { toggleTheme } from "../../redux/features/themeSlice";
+import { useAppDispatch, useAppSelector } from "../../redux/features/hooks";
+import { Moon, Sun } from "lucide-react";
 const Nav = () => {
+
+  const dispatch = useAppDispatch()
+  const {darkMode} :any = useAppSelector((store)=>store.theme)
+
+  const handleToggleTheme = ()=>{
+    dispatch(toggleTheme())
+  }
     return (
 
 
@@ -18,7 +28,7 @@ const Nav = () => {
     className="h-16 w-full bg-white z-[999]"
   >
     <nav className="w-full h-full max-w-[1230px] mx-auto px-[20px] flex justify-between items-center">
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center h-8">
         <img className="h-25 w-24 mt-9" src={logo} alt="" />
         <p className="font-bold text-2xl mt-14 pl-6 text-cyan-500">Disaster Relief</p>
       </div>
@@ -26,9 +36,22 @@ const Nav = () => {
       <ul className="hidden md:flex space-x-5 p-10 mt-5">
         <NavLink className="bg-cyan-500 p-3 rounded-sm font-bold text-white hover:bg-cyan-800" to="/">Home</NavLink>
         <NavLink to="/all-relief-goods" className="bg-cyan-500 p-3 rounded-sm font-bold text-white hover:bg-cyan-800">All Relief</NavLink>
-        <NavLink to="/dashboard" className="bg-cyan-500 p-3 rounded-sm font-bold text-white hover:bg-cyan-800">Dashboard</NavLink>
+        <NavLink to="dashboard/dashboard" className="bg-cyan-500 p-3 rounded-sm font-bold text-white hover:bg-cyan-800">Dashboard</NavLink>
+       
         <NavLink to="/login" className="bg-cyan-500 p-3 rounded-sm font-bold text-white hover:bg-cyan-800">Login</NavLink>
-        <NavLink to="/logout" className="bg-cyan-500 p-3 rounded-sm font-bold text-white hover:bg-cyan-800">Logout</NavLink>
+
+        <button 
+            onClick={handleToggleTheme}
+              className="rounded-lg backdrop-blur-[2px] p-1 "
+      
+            >
+              
+             {darkMode ?  <Sun size={24} color="#000"/> :  <Moon size={24} /> }
+              
+            </button>
+
+
+        {/* <NavLink to="/logout" className="bg-cyan-500 p-3 rounded-sm font-bold text-white hover:bg-cyan-800">Logout</NavLink> */}
       </ul>
 
       {/* Hamburger menu for mobile */}
